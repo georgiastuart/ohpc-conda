@@ -1,0 +1,12 @@
+{% set name = "gnu9" %}
+{% set project_delim = "-ohpc" %}
+{% set version = "9.4.0" %}
+
+package:
+  name: {{ name|lower }}{{ project_delim }}
+  version: {{ version }}
+
+build:
+  script_env:
+    - GNU_VERSION={{ version }}
+
